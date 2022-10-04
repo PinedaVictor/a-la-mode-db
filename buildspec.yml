@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+  pre_build:
+    commands:
+      - echo Running pre_build step
+      - npm install
+  build:
+    commands:
+      - echo Build starting on `date`
+      - echo This is where you would run unit test
+      - npm run build
+  post_build:
+    commands:
+      - echo Starting build
+      - npm start
+artifacts:
+  files:
+    - "**/*"
+  base-directory: "dist/"
