@@ -15,8 +15,7 @@ phases:
       - npm run build
   post_build:
     commands:
-      - echo Starting build
-      - npm start
+      - echo Build finished
 artifacts:
   files:
     - "**/*"
